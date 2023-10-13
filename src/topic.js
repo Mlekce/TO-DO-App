@@ -1,5 +1,3 @@
-
-
 export default class Topic {
   constructor(name, priority) {
     this.name = name;
