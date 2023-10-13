@@ -6,7 +6,7 @@ export default class List {
     this.priority = priority;
   }
 
-  getTaskStatus() {
+  getDays() {
     let now = new Date();
     let miliseconds_per_day = 1000 * 60 * 60 * 24;
     let now_miliseconds = Date.UTC(
@@ -19,12 +19,24 @@ export default class List {
       this.dueDate.getMonth(),
       this.dueDate.getDate()
     );
-    let difference = (due_miliseconds - now_miliseconds) / miliseconds_per_day;
-    if (difference > 0) {
-      return `Comming in ${difference} days.`;
-    } else if (difference == 0) {
-      return "Today tasks.";
+    return (due_miliseconds - now_miliseconds) / miliseconds_per_day;
+  }
+
+  checkTaskStatus() {
+    let checker = this.getDays();
+    if (checker >= 0) {
+      return true;
     }
-    return `You are late ${difference} days.`;
+    return false;
+  }
+
+  displayDays() {
+    let checker = this.getDays();
+    if (checker == 0) {
+      return "Today";
+    } else if (checker > 0) {
+      return "Upcoming";
+    }
+    return "Failed";
   }
 }
