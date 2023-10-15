@@ -3,54 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
     <title>My Webpack1</title>
   </head>
   <body>
     <div class="content">
       <section id="input-data">
         <div class="input">
-          <form action="#" method="get" id="input-list">
-            <fieldset>
-              <legend>Add task: </legend>
-            </fieldset>
-            <fieldset>
-              <label for="title">Task title:</label>
-              <input type="text" id="title" name="title" required>
-            </fieldset>
-            <fieldset>
-              <label for="description">Task description:</label>
-              <input type="text" id="description" name="description" required>
-            </fieldset>
-            <fieldset>
-              <label for="date">Due date:</label>
-              <input type="date" id="date" name="date" required>
-            </fieldset>
-            <fieldset>
-              <label for="priority">Task priority:</label>
-              <select name="priority" id="priority" required>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
-            </fieldset>
-            <fieldset>
-              <button type="submit">Add</button>
-            </fieldset>
-          </form>
-        </div>
-        <div class="input">
-          <form action="#" method="get" id="input-topic">
+          <form id="input-topic">
             <fieldset>
               <legend>Add group: </legend>
             </fieldset>
             <fieldset>
-              <label for="title">Task title:</label>
-              <input type="text" id="title" name="title" required>
+              <label for="title">Group title:</label>
+              <input type="text" id="group-title" name="group-title" required>
             </fieldset>
             <fieldset>
-              <label for="priority">Task priority:</label>
-              <select name="priority" id="priority" required>
+              <label for="priority">Group priority:</label>
+              <select name="priority" id="group-priority" required>
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
@@ -60,8 +30,7 @@
               <button type="submit">Add</button>
             </fieldset>
           </form>
-        </div>
-        
+        </div> 
       </section>
     </div>
   </body>
